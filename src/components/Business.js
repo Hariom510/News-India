@@ -31,7 +31,8 @@ function Business() {
   
     return (
       <div className="App">
-        <h1>Business News</h1>
+          <span style={{fontSize: "2rem",lineHeight: "1.3333333333", fontWeight: 'bold'}}>BUSINESS <span style={{color:'#ff9600',fontSize: "2rem",lineHeight: "1.3333333333", fontWeight: 'bold'}}>NEWS</span></span>
+
         {loading && <div>A moment please...</div>}
         {error && (
           <div>{`There is a problem fetching the post data - ${error}`}</div>
@@ -44,7 +45,7 @@ function Business() {
                 <img src={imageUrl} alt="" />
                 </div>
                 <p>{title}</p>
-                <a className='seePost' href={url}>See post</a>
+                <a className='seePost' href={url}><button className='button'>Read More</button></a>
                 <br />
               </li>
             ))}

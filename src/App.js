@@ -13,6 +13,8 @@ import Business from './components/Business';
 import Technology from './components/Technology';
 import { dividerClasses } from '@mui/material';
 import Entertainment from './components/Entertainment';
+import Footer from './components/Footer';
+import GoToTop from './components/GoToTop';
 
 export default function App() {
   //  const [comp, setComp] = useState("");
@@ -41,8 +43,8 @@ export default function App() {
       {comp==="sports" && <Sports />}
       {comp==="health" && <Health />}
     </div> */}
-    
-    <footer><h6>Copyright 2022 Hariom Kumar</h6></footer>
+    {/* <GoToTop /> */}
+    <Footer />
     </>
   );
  }

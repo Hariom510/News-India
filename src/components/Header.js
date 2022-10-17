@@ -8,9 +8,11 @@ function Header() {
     const [burgerStatus, setBurgerStatus] = useState(false);
     return (
         <Container>
+            <Link style={{textDecoration: 'none'}} to="/" > 
             <div className='anchorHead'>
-                <img className='iconImg same' src="https://icon-library.com/images/in-the-news-icon/in-the-news-icon-2.jpg" alt ="" />
-            NEWS INDIA</div>
+                <img className='iconImg same' src='images/news.png' alt ="" />
+            NEWS <span style={{color:'#ff9600', fontSize: "2rem", fontWeight: 'bold'}}>INDIA</span></div>
+            </Link>
             <Menu>
             {/* <Link href="/" passHref>
             <a href="replace">Go to my amazing page</a>
@@ -47,17 +49,20 @@ function Header() {
 export default Header
 
 const Container = styled.div`
-    min-height: 60px;
+    min-height: 12vh;
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 1rem;
     top:0;
     left:0;
     right: 0;
     z-index: 1;
-    background:#FF9F29;
+    background: white;
+    color: #2b3d52;
+    
+    box-shadow: 0px 4px 8px 1px rgb(0 0 0 / 30%);
 
 `
 const Menu = styled.div`
@@ -71,16 +76,17 @@ const Menu = styled.div`
 const RightMenu = styled.div`
         display:flex;
         align-items: center;
+        margin-right: 1.4rem;
         a{
         font-weight: 600;
         text-transform: uppercase;
         margin-right: 7px;
         text-decoration:none;
-        color: #333;
+        color: #2b3d52;
         
     }
     a:hover{
-        color:aliceblue;
+        color:#ff9600;
     }
 
 `
@@ -91,9 +97,9 @@ const InsideMenu = styled.div`
 `
 const CustomMenu = styled(MenuIcon)`
     cursor: pointer;
-
+    color: #2b3d52;
     &:hover{
-        color: aliceblue;
+        color: #ff9600;
     }
 `
 const BurgerNav = styled.div`
@@ -101,8 +107,8 @@ const BurgerNav = styled.div`
     top: 0;
     right: 0;
     bottom: 0;
-    background:#FF9F29;
-    color: #333;
+    background:#fff;
+    color: #2b3d52;
     width: 300px;
     z-index: 16;
     list-style: none;
@@ -110,27 +116,34 @@ const BurgerNav = styled.div`
     display: flex;
     flex-direction: column;
     text-align: start;
+    /* border: 2px solid #2b3d52;
+    border-radius: 6px; */
+
     transform: ${props => props.show ? 'translateX(0)': 'translateX(100%)'};
     transition: transform 0.2s;
     li{
         padding: 15px 0;
-        margin: 0 2px;
-        border-bottom: 1px solid rgba(0,0,0,.2);
+        margin: 1px 2px;
+        /* border-bottom: 1px solid #2b3d52; */
 
         a{
             font-weight: 600;
             text-decoration: none;
-            color: #333;
+            color: #2b3d52;
         }
         a:hover{
-            color:aliceblue;
+            color:#ff9600;
         }
     }
 `
 const CustomClose = styled(CloseIcon)`
     cursor: pointer;
+    color: #2b3d52;
+    margin-right: 1.1rem;
+    margin-bottom: 1rem;
+    margin-top: .6rem;
     &:hover{
-        color:aliceblue;
+        color: #ff9600;
     }
 `
 const CloseWrapper = styled.div`
