@@ -19,4 +19,7 @@ Please note that the API used for fetching news data is not free to use on share
 
 To experience the full functionality of the News India App, we recommend running the application locally on your machine.
 
+## Contributions
+Contributions to CodeClocker are welcome! If you find any issues or have suggestions for improvement, feel free to create a pull request.
 
+Happy coding! 🎉
